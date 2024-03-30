@@ -1,0 +1,176 @@
+@media screen and (max-width:1300px){
+  .about-me .about-more p i {
+    padding-inline: 3px;
+  }
+  .about-me .about-more {
+    flex-direction: column;
+    gap:0rem;
+    padding-block:8px;
+  }
+}
+
+
+@media screen and (max-width:990px){
+:root{
+  --common-padding:6rem;
+}
+  .navbar{
+    display: none;
+  }
+  #hamburger-nav{
+    display: flex;
+    background-color: transparent;
+  }
+  .hero-section .hero-container{
+    padding-inline:6rem;
+  }
+  .hero-title:first-child{
+    padding-right:14.5rem;
+  }
+  .hero-title:last-child{
+    padding-left:10rem;
+  }
+  section{
+    padding-block:4rem; 
+    padding-inline:var(--common-padding);
+  }
+  .about-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-me{
+    width: 100%;
+  }
+  #contact{
+    padding-bottom:1rem;
+  }
+}
+
+@media screen and (max-width:800px){
+  :root{
+    --nav-padding:3rem;
+  }
+  .hero-container .hero-title {
+    line-height: 9rem;
+    font-weight: 700;
+  }
+  .hero-title:first-child{
+    padding-right:12rem;
+  }
+  .hero-title:last-child{
+    padding-left:4.5rem;
+  }
+  .project-container{
+    justify-content: center;
+  }
+  .box{
+    width: 100%;
+  }
+  .contact-container .myform{
+    width: 100%;
+  }
+  .contact-container .social-icons{
+    width: 100%;
+    gap:1rem;
+
+    & i {
+      font-size: 17px;
+    }
+  }
+}
+
+
+ @media screen and (max-width:710px){
+  .hero-section .hero-container{
+    padding-inline:4rem;
+  }
+  .skill-container{
+    gap:3rem;
+  }
+  article{
+    width: 70%;
+    padding-block:10px;
+  }
+ }
+
+
+ @media screen and (max-width:570px){
+  :root{
+    --common-padding:4rem;
+  }
+  .hero-section .hero-container{
+    padding-inline:1rem;
+  }
+  .hero-container .hero-title{
+    font-weight: 700;
+    line-height: 6rem;
+    letter-spacing: 3px;
+  }
+  .hero-title:first-child{
+    padding-right:4rem;
+  }
+  .hero-title:last-child{
+    padding-left:4rem;
+  }
+  .title{
+    font-size: 1.9rem;
+  }
+  p{
+    font-size: 15px;
+  }
+  section{
+    padding-block:3.5rem;
+  }
+  .pic-container{
+    width: 100%;
+    height: 250px;
+  }
+
+ }
+
+@media screen and (max-width:330px){
+  :root{
+    --common-padding:1rem;
+  }
+  #hamburger-nav .logo{
+    font-size: 1.3rem;
+  }
+  .hero-section{
+    height: 80vh;
+  }
+  .hero-section .hero-container{
+    padding-block:10rem 6rem;
+  }
+  .hero-container .hero-title{
+    line-height: 3.5rem;
+    letter-spacing: 3px;
+  }
+  p{
+    font-size: 13px;
+  }
+  section{
+    padding-block:3rem;
+    padding-inline:var(--common-padding);
+  }
+  .about-me{
+    padding:15px;
+    text-align: center;
+
+    & p{
+      text-align: justify;
+    }
+  }
+  .about-more div p{
+    font-size: 11px !important;
+    padding-block:5px 10px;
+    height: 30px;
+  }
+  .about-me .about-more div p i {
+    padding-inline: 4px;
+  }
+  .btn{
+    width: 160px;
+    font-size: 12px;
+    padding: .5rem .8rem;
+  }
+}

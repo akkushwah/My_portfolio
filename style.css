@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400..800&family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+:root{
+  --nav-padding:10rem;
+  --common-padding:8rem;
+}
+
+p{
+  color:#555555
+}
+a{
+  text-decoration:none;
+  color:black;
+}
+a, btn{
+  transition:all 300ms ease;
+}
+
+.title{
+  font-size: 3rem;
+  font-weight: 600;
+}
+section{
+  height:auto;
+  width: 100vw;
+  padding-block:5rem;
+  padding-inline:var(--common-padding);
+  text-align: center;
+}
+
+/*
+=================================================
+                  NavBar
+================================================
+ */
+.navbar{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height:15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:20px;
+  padding-inline: var(--nav-padding);
+  background-color: transparent;
+}
+.logo{
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-links{
+  display: flex;
+  gap:25px;
+  align-items: center;
+  list-style: none;
+  font-size: 1.3rem;
+  padding-inline:10px; 
+}
+.nav-items{
+  position: relative;
+}
+.nav-items:hover{
+  color: gray;
+}
+
+.nav-items::after{
+  content: "";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  border-bottom:2px solid gray;
+  transition: all 0.2s ease-in;
+}
+.nav-items:hover::after{
+  width: 100%;
+}
+
+/* Hamburger Menu */
+#hamburger-nav{
+  position: absolute;
+  top:0;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--nav-padding);
+  /* border: 1px solid black; */
+}
+.hamburger-menu{
+  position: relative;
+  display: inline-block;
+  padding-block:40px;
+}
+.hamburger-icon{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:24px;
+  width: 30px;
+  cursor: pointer;
+}
+.hamburger-icon span{
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+#hamburger-nav .nav-links{
+  flex-direction: column;
+  position: absolute;
+  top:6rem;
+  left:-100%;
+  text-align: center;
+  width: 65%;
+  border-radius: 20px;
+  padding-block:20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #ffffff62;
+  backdrop-filter: blur(3px)
+  ;
+  transition: all 0.5s ease-in-out;
+}
+
+#hamburger-nav .nav-links.open {  
+  left:18%;
+}
+
+.hamburger-icon.open span:first-child{
+  transform:rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2){
+  opacity: 0;
+}
+.hamburger-icon.open span:last-child{
+  transform:rotate(-45deg) translate(10px, -5px);
+}
+.hamburger-icon span:first-child{
+  transform:none;
+  opacity: 1;
+}
+
+/*
+=================================================
+                  Hero section
+================================================
+ */
+
+.hero-section{
+  height: 100vh;
+  width: 100vw;
+  background-image: url("images/gradient_wave_in_monochrome_colours_0901.jpg");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+}
+.hero-section .hero-container{
+  padding-inline:8rem;
+  text-align: center;
+  padding-block:12.5rem 8.4rem;
+}
+.hero-container .hero-title{
+    font-size: 11vw;
+    font-weight: 600;
+    line-height: 11.5rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-family: "Rubik Dirt", system-ui;
+}
+.hero-title:first-child{
+  padding-right:18.5rem;
+}
+.hero-title:last-child{
+  padding-left:11rem;
+}
+ 
+/*
+=================================================
+                  About section
+================================================
+ */
+
+ .about-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  gap:60px;
+  padding-block:4.5rem 1.5rem;
+}
+.pic-container{
+  max-width: 400px;
+  width: 400px;
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 2px gray;
+ }
+ .about-me{
+  width: 60%;
+  border:2px solid gray;
+  border-radius: 15px;
+  padding:25px;
+  text-align: justify;
+
+  & .about-more{
+    display: flex;
+    gap:5rem;
+    padding:1rem;
+  }
+  & .about-more p{
+    font-size: 14px;
+    padding-block:10px;
+  }
+
+  & .about-more p i {
+    padding-inline: 10px;
+  }
+ }
+
+ .btn{
+  font-weight: 500;
+  padding: .8rem 1rem;
+  width: 200px;
+  border: 1px solid gray;
+  border-radius: 2rem;
+  font-size: 15px;
+  color: white;
+  letter-spacing: 1.5px;
+  background: rgb(0, 0, 0);
+  transition: all 500ms ease;
+ }
+
+ .btn:hover{
+  color:black;
+  background-color:white;
+ }
+
+ 
+/*
+=================================================
+                  Skills section
+================================================
+ */
+
+.skill-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap:4.5rem;
+  margin-block:6rem 1rem;
+  /* border: 1px solid red; */
+}
+
+article {
+  width: 220px;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  gap:20px;
+  padding:20px 10px;
+  text-transform: capitalize;
+  border-radius:15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
+  & div{
+    text-align: left;
+  }
+}
+article img{
+  height:30px;
+  width: 30px;
+}
+
+article:hover{
+  animation: bg-spin 3s linear infinite;
+}
+
+
+/*
+=================================================
+                  Projects section
+================================================
+ */
+
+.project-container{
+  display: flex;
+  justify-content:space-evenly;
+  gap:2rem;
+  flex-wrap: wrap;
+  margin-block:6rem 2rem;
+}
+
+.box{
+  width: 30%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  border-radius: calc(1.5rem + 15px);
+  padding:30px;
+  align-items: center;
+  border: 1px solid gray;
+  margin-bottom: 1rem;
+  transition: all .3s ease-in;
+}
+.box .img-box{
+
+  & img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius:1.5rem;
+  }
+}
+
+.project-heading{
+  font-size:1.6rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.box:hover{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  scale:1.09;
+}
+
+
+ 
+/*
+=================================================
+                  Contact section
+================================================
+ */
+#contact{
+  /* background-image: url("https://pattern-kid-main.s3.eu-west-1.amazonaws.com/assets/textures/svg/squiggles.svg"); */
+  /* background-image: url('images/some.svg'); */
+  background-repeat: no repeat;
+  background-size: cover;
+  background-position: left;
+  /* backdrop-filter: brightness(30%);
+  color:white !important; */
+}
+
+.contact-container{
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  align-items: Center;
+  gap:3rem;
+  margin-top:3.5rem;
+  /* border: 1px solid black; */
+  
+  & .myform{
+    width: 60%;
+    padding-top:3rem 0rem;
+  }
+  & .social-icons{
+    width: 60%;
+  }
+}
+
+.myform input{
+  width:100%;
+  height:35px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding:20px;
+  margin-block:15px;
+  font-family: "Baloo Bhaina 2", sans-serif;
+  font-size: 14px;
+}
+
+.myform textarea{
+  width:100%;
+  padding:10px;
+  resize: none;
+  font-size: 14px;
+  margin-block:15px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  font-family: "Baloo Bhaina 2", sans-serif;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+.form-btn{
+  width: 160px;
+  margin-top:15px;
+}
+
+/* Icon Styling */
+.social-icons  {
+  display: flex;
+  gap:3.5rem;
+  margin-block:1rem;
+  justify-content: center;
+  
+  & i{
+    font-size: 20px;
+    padding:10px;
+    color:white;
+    border-radius: 50%;
+    background-color: #000;
+
+  }
+
+}
+.tooltip{
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext{
+  width: 120px;
+  border: 1px solid black;
+  border-radius: 8px;
+  text-align: center;
+  padding:5px;
+  position: absolute;
+  bottom: 130%;
+  left:-100%;
+  z-index: 10;
+  scale: 0;
+  transition: all .3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  scale: 1;
+}
+
+ 
+/*
+=================================================
+                  Footer section
+================================================
+ */
+
+ footer{
+  height:8vh;
+  width: 80%;
+  margin:auto;
+  text-align: center;
+  font-size: 14px;
+  padding-block:15px;
+  border-top: 1px solid gray;
+ }
