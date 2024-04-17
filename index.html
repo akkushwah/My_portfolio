@@ -8,6 +8,7 @@
   <!-- Own Stylesheet -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="media-queries.css">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
   <!-- Google font -->
 
@@ -58,8 +59,8 @@
     <!------------- Hero Page ------------->
     <div id="home" class="hero-section">
       <div class="hero-container">
-        <h1 class="hero-title">FULLSTACK <br></h1>
-        <h1 class="hero-title">DEVELOPER</h1>
+        <h1 class="hero-title" id="first">FULLSTACK <br></h1>
+        <h1 class="hero-title" id="second">DEVELOPER</h1>
       </div>
     </div>
 
@@ -284,13 +285,21 @@
         </div>
 
       </div>
+      <div class="navigation-btn">
+        <a href="#home">
+          <i class="fa-solid fa-angles-up "></i>
+        </a>
+      </div>
     </section>
 
     <!--------------- footer Page -------------->
 
     <footer>
       <p>© 2023 Akanksha Kushwah. All Rights Reserved.</p>
+
     </footer>
+
+
   </div>
 
 
@@ -299,7 +308,13 @@
 
 
 
-  <!-- Own JS -->
+  <!-- Gsap Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+  <!-- Scroll Trigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+  <!-- My Own Script -->
   <script src="script.js"></script>
 </body>
 
