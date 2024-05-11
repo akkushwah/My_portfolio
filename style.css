@@ -37,6 +37,11 @@ a, btn{
 .title{
   font-size: 3rem;
   font-weight: 600;
+  margin-top:10px;
+  display: inline-block;
+  line-height: 1em;
+  transform-origin: 0 0;
+
 }
 
 
@@ -46,6 +51,11 @@ section{
   padding-block:5rem;
   padding-inline:var(--common-padding);
   text-align: center;
+  position: relative;
+}
+section .text-wrapper{
+  position: relative;
+  display: inline-block;
 }
 
 /*
@@ -138,11 +148,11 @@ section{
   width: 65%;
   border-radius: 20px;
   padding-block:20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: #32325dad 0px 13px 27px -5px, #0000008b 0px 8px 16px -8px;
   background-color: #ffffff62;
-  backdrop-filter: blur(3px)
-  ;
+  backdrop-filter: blur(5px);
   transition: all 0.5s ease-in-out;
+  z-index: 100;
 }
 
 #hamburger-nav .nav-links.open {  
@@ -324,7 +334,7 @@ article:hover{
   align-items: center;
   border: 1px solid gray;
   margin-bottom: 1rem;
-  transition: all 300ms ease;
+  transition: all 300ms ease-in;
 }
 .box .img-box{
 
@@ -355,15 +365,12 @@ article:hover{
 ================================================
  */
 #contact{
-  /* background-image: url("https://pattern-kid-main.s3.eu-west-1.amazonaws.com/assets/textures/svg/squiggles.svg"); */
-  /* background-image: url('images/some.svg'); */
+  /* background-image: url("./images/bg-2.jpg"); */
+  background-image: url("https://img.freepik.com/free-vector/gradient-white-monochrome-background_23-2149008630.jpg?t=st=1714274363~exp=1714277963~hmac=e3a86ae4045f7e536ea9914a0bacf37a0cb52233e8756598d911576859dc4423&w=996");
   background-repeat: no repeat;
   background-size: cover;
   background-position: left;
   position: relative;
-
-  /* backdrop-filter: brightness(30%);
-  color:white !important; */
 }
 
 .contact-container{
@@ -373,6 +380,7 @@ article:hover{
   align-items: Center;
   gap:3rem;
   margin-top:3.5rem;
+  /* margin-bottom:-1rem; */
   /* border: 1px solid black; */
   
   & .myform{
@@ -397,7 +405,7 @@ article:hover{
 
 .myform textarea{
   width:100%;
-  padding:10px;
+  padding:10px 15px;
   resize: none;
   font-size: 14px;
   margin-block:15px;
@@ -418,7 +426,7 @@ article:hover{
 .social-icons  {
   display: flex;
   gap:3.5rem;
-  margin-block:1rem;
+  margin-block:3rem 0rem;
   justify-content: center;
   
   & i{
@@ -485,12 +493,12 @@ article:hover{
   text-align: center;
   font-size: 14px;
   padding-block:15px;
-  border-top: 1px solid gray;
+  /* border-top: 1px solid gray; */
  }
 
  .navigation-btn{
   position: absolute;
-  bottom: 10%;
+  bottom: 7.5%;
   left:85%;
   z-index: 100;
   padding:10px 15px;

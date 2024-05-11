@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <div class="main">
+  <div class="main" id="main">
     <!-- reveal page-->
     <div class="reveal-page">
     </div>
@@ -69,7 +69,9 @@
 
     <section id="about">
       <p>Get to Know More</p>
-      <h1 class="title">About Me</h1>
+      <span class="text-wrapper">
+        <h1 class="title">About me</h1>
+      </span>
 
       <div class="about-container">
         <div class="pic-container">
@@ -115,7 +117,10 @@
     <!------------- Skills Page -------------->
     <section id="skill">
       <p>Explore My</p>
-      <h1 class="title">Expertise</h1>
+      <span class="text-wrapper">
+        <h1 class="title">Expertise</h1>
+      </span>
+
 
       <div class="skill-container">
         <article>
@@ -184,7 +189,9 @@
 
     <section id="project">
       <p>Browse My Recent</p>
-      <h1 class="title">Project</h1>
+      <span class="text-wrapper">
+        <h1 class="title">Project</h1>
+      </span>
 
       <div class="project-container">
         <div class="box">
@@ -247,18 +254,20 @@
     <!--------------- contact Page ------------->
     <section id="contact">
       <p>Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+      <span class="text-wrapper">
+        <h1 class="title">Contact Me</h1>
+      </span>
 
       <div class="contact-container">
 
         <form action="#" method="post" class="myform">
           <div>
-            <input type="text" name="name" placeholder="Full Name">
+            <input type="text" name="name" placeholder="Full Name" class='fullName' required>
           </div>
           <div>
-            <input type="email" name="email" placeholder="Email Name">
+            <input type="email" name="email" placeholder="Email Name" class='email' required>
           </div>
-          <div><textarea type="email" name="email" placeholder="Write your message.." rows="3" cols="25"
+          <div><textarea type="email" class="message" name="email" placeholder="Write your message.." rows="3" cols="25"
               class="scroll"></textarea>
           </div>
           <button type="submit" class="btn form-btn">Submit</button>
@@ -296,7 +305,6 @@
 
     <footer>
       <p>© 2023 Akanksha Kushwah. All Rights Reserved.</p>
-
     </footer>
 
 
@@ -313,6 +321,10 @@
 
   <!-- Scroll Trigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+  <!-- Anime.js Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
 
   <!-- My Own Script -->
   <script src="script.js"></script>
