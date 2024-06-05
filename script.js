@@ -86,47 +86,26 @@ function animateArticles() {
 // hedings
 let headings = document.querySelectorAll('section .title');
 
-headings.forEach(h => {
-  h.innerHTML = h.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+// headings.forEach(h => {
+//   h.innerHTML = h.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-  anime.timeline({ loop: true })
-    .add({
-      targets: 'section .letter',
-      rotateY: [-90, 0],
-      duration: 500,
-      delay: (el, i) => 40 * i
-    }).add({
-      targets: 'text-wrapper',
-      duration: 1000,
-      easing: 'easeOutElastic(1, .6)',
-      // delay: 500
-    });
-});
+//   anime.timeline({ loop: true })
+//     .add({
+//       targets: 'section .letter',
+//       rotateY: [-90, 0],
+//       duration: 500,
+//       delay: (el, i) => 40 * i
+//     }).add({
+//       targets: 'text-wrapper',
+//       duration: 1000,
+//       easing: 'easeOutElastic(1, .6)',
+//       // delay: 500
+//     });
+// });
 
 
 
 // ********************************************************
-// function animateProjectCards() {
-//   let projectContainer = document.querySelector('.project-container')
-//   let projectCards = document.querySelectorAll('.box');
-
-//   projectCards.forEach((card) => {
-//     const t3 = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: projectContainer,
-//         start: "top 10%",
-//         end: "bottom 100%",
-//         scrub: .8,
-//         // stagger: .1,
-//         markers: true,
-//       }
-//     });
-
-//     gsap.set(card, { scale: 0 });
-//     t3.to(card, { scale: 1 });
-//   })
-
-// }
 
 
 

@@ -132,7 +132,7 @@
 
  }
 
-@media screen and (max-width:330px){
+@media screen and (max-width:370px){
   :root{
     --common-padding:1rem;
   }
@@ -148,6 +148,9 @@
   .hero-container .hero-title{
     line-height: 3.5rem;
     letter-spacing: 3px;
+  }
+  .box{
+    margin-inline:10px;
   }
   p{
     font-size: 13px;
@@ -177,4 +180,19 @@
     font-size: 12px;
     padding: .5rem .8rem;
   }
+  .navigation-btn{
+    bottom: 15%;
+    left:80%;
+    padding:6px 10px;
+  }
+  #about .svg-container{
+    width:150px;
+  }
+  #contact .svg-container{
+    width:170px;
+  }
+  .svg-container{
+    width: 135px;;
+  }
+  
 }

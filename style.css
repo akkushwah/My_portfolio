@@ -52,11 +52,47 @@ section{
   padding-inline:var(--common-padding);
   text-align: center;
   position: relative;
+  overflow-x: hidden;
+
 }
 section .text-wrapper{
   position: relative;
   display: inline-block;
 }
+
+.svg-container{
+  position: relative;
+  width: 220px;
+}
+.svg-container .icon{
+  width:100%;
+  color:black;
+  margin-top: 12px;
+  margin-right:5px;
+  transform:rotate(-6deg);
+}
+#about .svg-container{
+  width:250px;
+}
+#contact .svg-container{
+  width:280px;
+}
+.svg-container .icon path{
+  stroke-dasharray: 800;
+  stroke-dashoffset:900;
+  animation:animation 1.5s linear infinite;
+}
+@keyframes animation {
+  0% {
+    stroke-dashoffset: 900;}
+50% {
+  stroke-dashoffset:350; 
+}
+100% {
+  stroke-dashoffset:0; 
+}
+}
+
 
 /*
 =================================================
@@ -183,7 +219,7 @@ section .text-wrapper{
 .hero-section{
   height: 100vh;
   width: 100vw;
-  background-image: url("images/background.jpg");
+  background-image: url("assets/images/background.jpg");
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
@@ -238,11 +274,12 @@ section .text-wrapper{
   & .about-more{
     display: flex;
     gap:5rem;
-    padding:1rem;
+    padding-block:.8rem;
   }
   & .about-more p{
     font-size: 14px;
     padding-block:10px;
+    word-wrap: break-word;
   }
 
   & .about-more p i {
@@ -339,10 +376,11 @@ article:hover{
 .box .img-box{
 
   & img{
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
+    aspect-ratio: 1;
     object-fit: cover;
-    border-radius:1.5rem;
+    border-radius:1.5rem;    
   }
 }
 
@@ -401,6 +439,8 @@ article:hover{
   margin-block:15px;
   font-family: "Baloo Bhaina 2", sans-serif;
   font-size: 14px;
+  outline: none;
+  /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
 }
 
 .myform textarea{
@@ -411,7 +451,9 @@ article:hover{
   margin-block:15px;
   border-radius: 20px;
   border: 1px solid gray;
+  outline: none;
   font-family: "Baloo Bhaina 2", sans-serif;
+/* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px; */
 }
 
 .scroll::-webkit-scrollbar {
@@ -421,6 +463,27 @@ article:hover{
   width: 160px;
   margin-top:15px;
 }
+
+.myform input:focus, textarea:focus{
+  color:black;
+  animation: float 1.5s ease infinite;
+}
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-10px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+
 
 /* Icon Styling */
 .social-icons  {
@@ -505,8 +568,6 @@ article:hover{
   border: 1px solid black;
   border-radius: 50%;
   animation:beat 1s infinite alternate-reverse ease-in-out;
-  /* color:red;
-  background-color: blue; */
 }
 @keyframes beat {
   0%{
