@@ -8,17 +8,6 @@ function toggleMenu() {
 
 // ************** Form ******************
 
-// let form = document.querySelector('.myform');
-
-// form.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//   let fullName = document.querySelector('.fullName').value;
-//   let email = document.querySelector('.email').value;
-//   let message = document.querySelector('.message').value;
-//   let subject = 'This mail is form your portfolio site'; // Subject of the email
-//   let body = `Hello ${fullName}\n ${email}\n\n ${message}`
-// })
-
 
 // *************** GSAP *****************
 
@@ -86,23 +75,6 @@ function animateArticles() {
 // hedings
 let headings = document.querySelectorAll('section .title');
 
-// headings.forEach(h => {
-//   h.innerHTML = h.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-//   anime.timeline({ loop: true })
-//     .add({
-//       targets: 'section .letter',
-//       rotateY: [-90, 0],
-//       duration: 500,
-//       delay: (el, i) => 40 * i
-//     }).add({
-//       targets: 'text-wrapper',
-//       duration: 1000,
-//       easing: 'easeOutElastic(1, .6)',
-//       // delay: 500
-//     });
-// });
-
 
 
 // ********************************************************
@@ -113,27 +85,3 @@ logoAnimation();
 animateArticles();
 // animateProjectCards()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Holding a B.Tech degree in Computer Science, India. I possess a strong foundation in
-//             programming languages. Currently, I am engaged in intensive study of the MERN stack to broaden my skillset
-//             and become a full-stack developer. My passion lies in creating user interfaces that are not only visually
-//             appealing but also
-//             highly responsive and user-friendly. 
